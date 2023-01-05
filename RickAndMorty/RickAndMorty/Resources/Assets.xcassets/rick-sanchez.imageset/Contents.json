@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "rick-sanchez-100(@1x).png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "rick-sanchez-200(@2x).png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "rick-sanchez-300(@3x).png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

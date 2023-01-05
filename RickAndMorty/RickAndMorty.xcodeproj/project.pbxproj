@@ -11,6 +11,10 @@
 		C5B848D12967453D00E50BCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B848D02967453D00E50BCE /* SceneDelegate.swift */; };
 		C5B848D82967453D00E50BCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5B848D72967453D00E50BCE /* Assets.xcassets */; };
 		C5B848EC296746D300E50BCE /* RMTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B848EB296746D300E50BCE /* RMTabBarVC.swift */; };
+		C5B848EE2967496200E50BCE /* RMCharacterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B848ED2967496200E50BCE /* RMCharacterVC.swift */; };
+		C5B848F02967497600E50BCE /* RMLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B848EF2967497600E50BCE /* RMLocationVC.swift */; };
+		C5B848F2296749A800E50BCE /* RMEpisodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B848F1296749A800E50BCE /* RMEpisodeVC.swift */; };
+		C5B848F4296749BC00E50BCE /* RMSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B848F3296749BC00E50BCE /* RMSettingsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		C5B848D72967453D00E50BCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5B848DC2967453D00E50BCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5B848EB296746D300E50BCE /* RMTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMTabBarVC.swift; sourceTree = "<group>"; };
+		C5B848ED2967496200E50BCE /* RMCharacterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterVC.swift; sourceTree = "<group>"; };
+		C5B848EF2967497600E50BCE /* RMLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMLocationVC.swift; sourceTree = "<group>"; };
+		C5B848F1296749A800E50BCE /* RMEpisodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEpisodeVC.swift; sourceTree = "<group>"; };
+		C5B848F3296749BC00E50BCE /* RMSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSettingsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +137,10 @@
 			isa = PBXGroup;
 			children = (
 				C5B848EB296746D300E50BCE /* RMTabBarVC.swift */,
+				C5B848ED2967496200E50BCE /* RMCharacterVC.swift */,
+				C5B848F1296749A800E50BCE /* RMEpisodeVC.swift */,
+				C5B848EF2967497600E50BCE /* RMLocationVC.swift */,
+				C5B848F3296749BC00E50BCE /* RMSettingsVC.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -202,9 +214,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5B848F02967497600E50BCE /* RMLocationVC.swift in Sources */,
 				C5B848EC296746D300E50BCE /* RMTabBarVC.swift in Sources */,
 				C5B848CF2967453D00E50BCE /* AppDelegate.swift in Sources */,
 				C5B848D12967453D00E50BCE /* SceneDelegate.swift in Sources */,
+				C5B848EE2967496200E50BCE /* RMCharacterVC.swift in Sources */,
+				C5B848F4296749BC00E50BCE /* RMSettingsVC.swift in Sources */,
+				C5B848F2296749A800E50BCE /* RMEpisodeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
