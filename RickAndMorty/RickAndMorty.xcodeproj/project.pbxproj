@@ -25,6 +25,9 @@
 		C5B8490429675E0600E50BCE /* RMCharacterStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B8490329675E0600E50BCE /* RMCharacterStatus.swift */; };
 		C5B8490629675E2100E50BCE /* RMCharacterGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B8490529675E2100E50BCE /* RMCharacterGender.swift */; };
 		C5B8490B296760D800E50BCE /* RMEpisodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B8490A296760D800E50BCE /* RMEpisodeModel.swift */; };
+		C5CD891729677C9A00748A8E /* RMGetAllCharactersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CD891629677C9A00748A8E /* RMGetAllCharactersResponse.swift */; };
+		C5CD891929677F0C00748A8E /* RMGetAllLocationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CD891829677F0C00748A8E /* RMGetAllLocationsResponse.swift */; };
+		C5CD891B29677F3900748A8E /* RMGetAllEpisodesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CD891A29677F3900748A8E /* RMGetAllEpisodesResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		C5B8490329675E0600E50BCE /* RMCharacterStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterStatus.swift; sourceTree = "<group>"; };
 		C5B8490529675E2100E50BCE /* RMCharacterGender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterGender.swift; sourceTree = "<group>"; };
 		C5B8490A296760D800E50BCE /* RMEpisodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEpisodeModel.swift; sourceTree = "<group>"; };
+		C5CD891629677C9A00748A8E /* RMGetAllCharactersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMGetAllCharactersResponse.swift; sourceTree = "<group>"; };
+		C5CD891829677F0C00748A8E /* RMGetAllLocationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMGetAllLocationsResponse.swift; sourceTree = "<group>"; };
+		C5CD891A29677F3900748A8E /* RMGetAllEpisodesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMGetAllEpisodesResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +101,8 @@
 		C5B848E2296745CF00E50BCE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C5B8490829675E9400E50BCE /* Character */,
-				C5B84909296760C900E50BCE /* Episode */,
-				C5B8490729675E8600E50BCE /* Location */,
+				C5CD891529677C7600748A8E /* APIResponseTypes */,
+				C5CD891429677C5F00748A8E /* DataTypes */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,6 +204,26 @@
 			path = Episode;
 			sourceTree = "<group>";
 		};
+		C5CD891429677C5F00748A8E /* DataTypes */ = {
+			isa = PBXGroup;
+			children = (
+				C5B8490829675E9400E50BCE /* Character */,
+				C5B84909296760C900E50BCE /* Episode */,
+				C5B8490729675E8600E50BCE /* Location */,
+			);
+			path = DataTypes;
+			sourceTree = "<group>";
+		};
+		C5CD891529677C7600748A8E /* APIResponseTypes */ = {
+			isa = PBXGroup;
+			children = (
+				C5CD891629677C9A00748A8E /* RMGetAllCharactersResponse.swift */,
+				C5CD891829677F0C00748A8E /* RMGetAllLocationsResponse.swift */,
+				C5CD891A29677F3900748A8E /* RMGetAllEpisodesResponse.swift */,
+			);
+			path = APIResponseTypes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -270,7 +295,9 @@
 			files = (
 				C5B8490229675B6000E50BCE /* RMOriginModel.swift in Sources */,
 				C5B848F02967497600E50BCE /* RMLocationVC.swift in Sources */,
+				C5CD891929677F0C00748A8E /* RMGetAllLocationsResponse.swift in Sources */,
 				C5B848F62967539900E50BCE /* RMLocationModel.swift in Sources */,
+				C5CD891B29677F3900748A8E /* RMGetAllEpisodesResponse.swift in Sources */,
 				C5B8490629675E2100E50BCE /* RMCharacterGender.swift in Sources */,
 				C5B848EC296746D300E50BCE /* RMTabBarVC.swift in Sources */,
 				C5B848CF2967453D00E50BCE /* AppDelegate.swift in Sources */,
@@ -284,6 +311,7 @@
 				C5B848F2296749A800E50BCE /* RMEpisodeVC.swift in Sources */,
 				C5B8490029675B5900E50BCE /* RMCharacterModel.swift in Sources */,
 				C5B848FC2967554000E50BCE /* RMRequest.swift in Sources */,
+				C5CD891729677C9A00748A8E /* RMGetAllCharactersResponse.swift in Sources */,
 				C5B848F82967543D00E50BCE /* RMService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
