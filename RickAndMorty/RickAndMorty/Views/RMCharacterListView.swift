@@ -98,6 +98,12 @@ extension RMCharacterListView: RMCharacterListViewViewModelDelegate {
         }
     }
     
+    func didLoadMoreCharacters(with newIndexPaths: [IndexPath]) {
+        collectionView.performBatchUpdates {
+            self.collectionView.insertItems(at: newIndexPaths)
+        }
+    }
+    
     func didSelectCharacter(_ character: RMCharacterModel) {
         delegate?.rmCharacterListView(self, didSelectCharacter: character)
     }
