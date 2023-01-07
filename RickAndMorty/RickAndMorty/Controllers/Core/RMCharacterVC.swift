@@ -10,16 +10,18 @@ import UIKit
 /// Controller to show and search for characters
 class RMCharacterVC: UIViewController {
     
-    // MARK: - Private properties
-    private let characterListView = CharacterListView()
-    
     // MARK: - Public properties
+    
+    // MARK: - Private properties
+    private let characterListView = RMCharacterListView()
+    
     // MARK: - Lyfecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Characters"
         view.backgroundColor = .systemBackground
         
+        characterListView.delegate = self
         view.addSubview(characterListView)
         makeConstraints()
     }
@@ -32,6 +34,19 @@ class RMCharacterVC: UIViewController {
             characterListView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             characterListView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
+    }
+    
+}
+
+// MARK: - RMCharacterListViewDelegate
+extension RMCharacterVC: RMCharacterListViewDelegate {
+    
+    func rmCharacterListView(_ characterListView: RMCharacterListView, didSelectCharacter character: RMCharacterModel) {
+        // Open detail controller for that character
+        let viewModel = RMCharacterDetailViewViewModel(character: character)
+        let detailVC = RMCharacterDetailVC(viewModel: viewModel)
+        detailVC.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
 }
