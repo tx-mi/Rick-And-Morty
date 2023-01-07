@@ -14,13 +14,15 @@ final class RMCharacterDetailViewViewModel {
         return character.name.uppercased()
     }
     
-    enum SectionType: CaseIterable {
-        case photo
-        case information
-        case episodes
+    enum SectionType {
+        case photo(viewModel: RMCharacterPhotoCollectionViewCellViewModel)
+        
+        case information(viewModels: [RMCharacterInfoCollectionViewCellViewModel])
+        
+        case episodes(viewModels: [RMCharacterEpisodeCollectionViewCellViewModel])
     }
     
-    public let sections: [SectionType] = SectionType.allCases
+    public var sections: [SectionType] = []
    
     // MARK: - Private properties
     private let character: RMCharacterModel
@@ -33,9 +35,27 @@ final class RMCharacterDetailViewViewModel {
     // MARK: - init
     init(character: RMCharacterModel) {
         self.character = character
+        setupSections()
     }
     
     // MARK: - Private methods
+    
+    private func setupSections() {
+        sections = [
+            .photo(viewModel: .init()),
+            .information(viewModels: [
+                .init(),
+                .init(),
+                .init(),
+                .init(),
+            ]),
+            .episodes(viewModels: [
+                .init(),
+                .init(),
+                .init(),
+            ])
+        ]
+    }
     
     // MARK: - Public methods
     public func createPhotoLayout() -> NSCollectionLayoutSection? {
@@ -58,13 +78,13 @@ final class RMCharacterDetailViewViewModel {
         let item = NSCollectionLayoutItem(
             layoutSize: .init(widthDimension: .fractionalWidth(0.5),
                               heightDimension: .fractionalHeight(1)))
-        item.contentInsets = .init(top: 0, leading: 0, bottom: 8, trailing: 8)
+        item.contentInsets = .init(top: 0, leading: 0, bottom: 2, trailing: 2)
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: .init(widthDimension: .fractionalWidth(1.0),
                               heightDimension: .estimated(150)),
             subitems: [item])
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = .init(top: 8, leading: 8, bottom: 8, trailing: 0)
+        section.contentInsets = .init(top: 2, leading: 2, bottom: 2, trailing: 0)
         section.orthogonalScrollingBehavior = .none
         return section
     }
