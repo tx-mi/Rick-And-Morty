@@ -79,16 +79,17 @@ final class RMCharacterDetailViewViewModel {
     }
     
     public func createInformationLayout() -> NSCollectionLayoutSection? {
+        let inset: CGFloat = 8
         let item = NSCollectionLayoutItem(
             layoutSize: .init(widthDimension: .fractionalWidth(0.5),
                               heightDimension: .fractionalHeight(1)))
-        item.contentInsets = .init(top: 0, leading: 0, bottom: 2, trailing: 2)
+        item.contentInsets = .init(top: 0, leading: 0, bottom: inset, trailing: inset)
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: .init(widthDimension: .fractionalWidth(1.0),
-                              heightDimension: .estimated(150)),
+                              heightDimension: .estimated(80)),
             subitems: [item])
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = .init(top: 2, leading: 2, bottom: 2, trailing: 0)
+        section.contentInsets = .init(top: inset, leading: inset, bottom: inset, trailing: 0)
         section.orthogonalScrollingBehavior = .none
         return section
     }

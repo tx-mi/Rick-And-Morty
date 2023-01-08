@@ -34,6 +34,7 @@ final class RMCharacterInfoCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        contentView.layer.cornerRadius = 8
     }
     
     // MARK: - Private methods
