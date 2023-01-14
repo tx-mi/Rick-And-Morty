@@ -5,17 +5,20 @@
 //  Created by Ramazan Abdulaev on 08.01.2023.
 //
 
-import Foundation
+import UIKit
 
 final class RMCharacterInfoCollectionViewCellViewModel {
     
     // MARK: - Public properties
     
-    public var titleString: String {
+    public var titleDisplay: String {
         return title.text
     }
     
-    public var valueString: String {
+    public var valueDisplay: String {
+        if value.isEmpty {
+            return "None"
+        }
         switch title {
         case .created:
             let dateFormatter = DateFormatter()
@@ -30,6 +33,48 @@ final class RMCharacterInfoCollectionViewCellViewModel {
         }
     }
     
+    public var iconImage: UIImage? {
+        switch title {
+        case .status:
+            return UIImage(systemName: "bell")
+        case .gender:
+            return UIImage(systemName: "person")
+        case .type:
+            return UIImage(systemName: "leaf")
+        case .species:
+            return UIImage(systemName: "pawprint")
+        case .location:
+            return UIImage(systemName: "globe.americas")
+        case .origin:
+            return UIImage(systemName: "globe.americas")
+        case .created:
+            return UIImage(systemName: "calendar")
+        case .totalEpisodes:
+            return UIImage(systemName: "tv.circle")
+        }
+    }
+    
+    public var tintColor: UIColor {
+        switch title {
+        case .status:
+            return .systemBlue
+        case .gender:
+            return .systemPurple
+        case .type:
+            return .systemYellow
+        case .species:
+            return .systemRed
+        case .location:
+            return .systemGreen
+        case .origin:
+            return .systemBrown
+        case .created:
+            return .systemPink
+        case .totalEpisodes:
+            return .systemOrange
+        }
+    }
+    
     enum TitleType: String {
         case status
         case gender
@@ -41,7 +86,7 @@ final class RMCharacterInfoCollectionViewCellViewModel {
         case totalEpisodes = "Total Episodes"
         
         var text: String {
-            return self.rawValue.capitalized
+            return self.rawValue.uppercased()
         }
     }
     

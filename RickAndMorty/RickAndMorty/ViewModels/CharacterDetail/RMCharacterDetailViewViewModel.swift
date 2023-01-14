@@ -86,7 +86,7 @@ final class RMCharacterDetailViewViewModel {
         item.contentInsets = .init(top: 0, leading: 0, bottom: inset, trailing: inset)
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: .init(widthDimension: .fractionalWidth(1.0),
-                              heightDimension: .estimated(80)),
+                              heightDimension: .estimated(150)),
             subitems: [item])
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = .init(top: inset, leading: inset, bottom: inset, trailing: 0)
