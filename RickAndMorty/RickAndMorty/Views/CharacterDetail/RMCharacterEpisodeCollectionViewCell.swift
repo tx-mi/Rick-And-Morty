@@ -43,6 +43,6 @@ final class RMCharacterEpisodeCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Public methods
     public func configure(with viewModel: RMCharacterEpisodeCollectionViewCellViewModel) {
-        
+        viewModel.fetchEpisode()
     }
 }
