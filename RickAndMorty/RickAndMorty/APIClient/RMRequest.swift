@@ -14,10 +14,7 @@ final class RMRequest {
     private enum Constants {
         static let baseUrl: String = "https://rickandmortyapi.com/api"
     }
-    
-    /// Desired endpoint
-    private let endpoint: RMEndpoint
-    
+   
     /// Path components for API, if any
     private let pathComponents: [String]
     
@@ -50,6 +47,9 @@ final class RMRequest {
     // MARK: - Public
     /// Desired http method
     public let httpMethod = "GET"
+    
+    /// Desired endpoint
+    public let endpoint: RMEndpoint
     
     /// Computed and constructed url
     public var url: URL? {
