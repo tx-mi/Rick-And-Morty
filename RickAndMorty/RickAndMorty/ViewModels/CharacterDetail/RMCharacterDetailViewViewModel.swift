@@ -14,6 +14,10 @@ final class RMCharacterDetailViewViewModel {
         return character.name.uppercased()
     }
     
+    public var episodes: [String] {
+        character.episode
+    }
+    
     enum SectionType {
         case photo(viewModel: RMCharacterPhotoCollectionViewCellViewModel)
         
