@@ -13,11 +13,11 @@ final class RMEpisodeDetailVC: UIViewController {
     // MARK: - Public Properties
     
     // MARK: - Private Properties
-    private var url: URL?
+    private let viewModel: RMEpisodeDetailViewViewModel
     
     // MARK: - init
     init(url: URL?) {
-        self.url = url
+        self.viewModel = RMEpisodeDetailViewViewModel(endpointURL: url)
         super.init(nibName: nil, bundle: nil)
     }
     
