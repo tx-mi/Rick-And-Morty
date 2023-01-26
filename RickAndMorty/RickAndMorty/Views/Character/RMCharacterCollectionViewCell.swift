@@ -69,10 +69,12 @@ final class RMCharacterCollectionViewCell: UICollectionViewCell {
         layoutIfNeeded()
         contentView.layer.masksToBounds = true
         contentView.layer.cornerRadius = 5
-        contentView.layer.shadowColor = UIColor.secondaryLabel.cgColor
-        contentView.layer.shadowRadius = 5
-        contentView.layer.shadowOffset = CGSize(width: 5, height: 5)
-        contentView.layer.shadowOpacity = 0.3
+        
+        // Shadow
+        layer.shadowColor = UIColor.secondaryLabel.cgColor
+        layer.shadowRadius = 4
+        layer.shadowOffset = CGSize(width: 5, height: 6)
+        layer.shadowOpacity = 0.3
     }
     
     // MARK: - Private methods
