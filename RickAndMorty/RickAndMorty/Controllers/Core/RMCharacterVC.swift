@@ -8,7 +8,7 @@
 import UIKit
 
 /// Controller to show and search for characters
-class RMCharacterVC: UIViewController {
+final class RMCharacterVC: UIViewController {
     
     // MARK: - Public properties
     

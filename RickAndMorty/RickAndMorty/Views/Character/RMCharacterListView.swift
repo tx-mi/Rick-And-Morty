@@ -58,8 +58,6 @@ final class RMCharacterListView: UIView {
         viewModel.delegate = self
         viewModel.fetchCharacters()
         
-        
-        
     }
     
     required init?(coder: NSCoder) {

@@ -12,9 +12,6 @@ final class RMCharacterPhotoCollectionViewCell: UICollectionViewCell {
     static let identifier = "RMCharacterPhotoCollectionViewCellIdentifier"
     
     // MARK: - Private properties
-    private enum Constants {
-    }
-    
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
